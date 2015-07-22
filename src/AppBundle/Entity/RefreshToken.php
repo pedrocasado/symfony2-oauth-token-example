@@ -88,6 +88,14 @@ class RefreshToken extends BaseRefreshToken
         // var_dump($user->getId());exit;
         // our user is the estabelecimento_id because we renamed
         $this->estabelecimento_id = $user;
-    }    
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function getUser()
+    {
+        return $this->estabelecimento_id;
+    }
 
 }
