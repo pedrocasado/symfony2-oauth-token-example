@@ -6,6 +6,7 @@ namespace AppBundle\Entity;
 use FOS\OAuthServerBundle\Entity\RefreshToken as BaseRefreshToken;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\OAuthServerBundle\Model\ClientInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity
@@ -77,5 +78,16 @@ class RefreshToken extends BaseRefreshToken
     {
         return $this->estabelecimento_id;
     }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function setUser(UserInterface $user)
+    {
+        // $this->user = $user;
+        // var_dump($user->getId());exit;
+        // our user is the estabelecimento_id because we renamed
+        $this->estabelecimento_id = $user;
+    }    
 
 }
