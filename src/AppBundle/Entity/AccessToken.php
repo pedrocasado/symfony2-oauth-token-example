@@ -100,7 +100,7 @@ class AccessToken extends BaseAccessToken
      */
     public function getUser()
     {
-        return $this->user;
+        return $this->estabelecimento_id;
     }
 
 }
