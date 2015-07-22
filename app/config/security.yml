@@ -1,0 +1,43 @@
+security:
+
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
+        AppBundle\Entity\Estabelecimento: plaintext
+            #algorithm: bcrypt
+
+        OAuth2\ServerBundle\Entity\User:
+            algorithm:          sha512
+            encode_as_base64:   true
+            iterations:         5000
+
+    providers:
+        estabelecimento:
+            id: platform.user.provider
+
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt|error)|css|images|js)/
+            security: false
+
+        oauth_token:
+            pattern:    ^/oauth/v2/token
+            security:   false
+
+        #oauth_authorize:
+        #    pattern:    ^/oauth/v2/auth
+            # Add your favorite authentication process here
+
+        api:
+            pattern:    ^/api
+            fos_oauth:  true
+            stateless:  true
+            anonymous:  true # can be omitted as its default value
+
+        default:
+            anonymous: ~
+
+
+    access_control:
+        - { path: ^/api, roles: [ IS_AUTHENTICATED_FULLY ] }

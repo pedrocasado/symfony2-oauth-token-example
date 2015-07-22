@@ -1,0 +1,9 @@
+# http://symfony.com/doc/current/book/doctrine.html#book-doctrine-field-types
+# http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/yaml-mapping.html
+AppBundle\Entity\Client:
+    type: entity
+    table: client
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }

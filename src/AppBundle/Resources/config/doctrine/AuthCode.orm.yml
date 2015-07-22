@@ -1,0 +1,25 @@
+# http://symfony.com/doc/current/book/doctrine.html#book-doctrine-field-types
+# http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/yaml-mapping.html
+AppBundle\Entity\AuthCode:
+    type: entity
+    table: auth_code
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+
+    manyToOne:
+        client:
+            targetEntity: Client
+            joinColumn:
+                nullable: false
+                name: client_id
+                referencedColumnName: id
+                onDelete: CASCADE
+        estabelecimento_id:
+            targetEntity: Estabelecimento
+            joinColumn:
+                nullable: false
+                name: estabelecimento_id
+                referencedColumnName: id
+                onDelete: CASCADE

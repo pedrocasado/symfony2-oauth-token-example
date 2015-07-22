@@ -1,0 +1,55 @@
+# http://symfony.com/doc/current/book/doctrine.html#book-doctrine-field-types
+# http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/yaml-mapping.html
+AppBundle\Entity\Estabelecimento:
+    type: entity
+    table: estabelecimento
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        user_secret:
+            type: string
+            length: 100
+        user_key:
+            type: string
+            length: 100
+        nome:
+            type: string
+            length: 100
+            nullable: true
+        email:
+            type: string
+            length: 200
+            nullable: true
+        senha:
+            type: string
+            length: 100
+            nullable: true
+        cidade:
+            type: string
+            length: 200
+            nullable: true
+        lat:
+            type: decimal
+            precision: 10
+            scale: 8
+            nullable: true
+        lng:
+            type: decimal
+            precision: 11
+            scale: 8
+            nullable: true
+        status:
+            type: string
+            length: 100
+            nullable: true
+        tipo:
+            type: string
+            length: 100
+            nullable: true
+        is_active:
+            type: boolean
+        criado_em:
+            type: datetime
+            nullable: true
