@@ -33,6 +33,10 @@ your response should be something like:
     refresh_token: "ZWUzOTJhMzk2NjYxOWQ3MWJlMmI4MmUyOGNkZjJlNGUxMGYwZGNlYzgyYTdjODI3M2M0ZTExNjA4YmMyZTlmZA"
     }
     
- thanks for some good blog posts: http://blog.tankist.de/blog/2013/07/17/oauth2-explained-part-2-setting-up-oauth2-with-symfony2-using-fosoauthserverbundle/ , https://gist.github.com/lologhi/7b6e475a2c03df48bcdd , https://github.com/FriendsOfSymfony/FOSOAuthServerBundle/blob/master/Resources/doc/index.md
+ thanks for some good blog posts: 
+ - http://blog.tankist.de/blog/2013/07/17/oauth2-explained-part-2-setting-up-oauth2-with-symfony2-using-fosoauthserverbundle/
+ - https://gist.github.com/lologhi/7b6e475a2c03df48bcdd
+ - https://github.com/FriendsOfSymfony/FOSOAuthServerBundle/blob/master/Resources/doc/index.md
+ - http://blog.logicexception.com/2012/04/securing-syfmony2-rest-service-wiith.html
  
  if you're having problems implementing this, just reach me.
